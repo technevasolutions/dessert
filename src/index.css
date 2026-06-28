@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 47% 96%;
+    --foreground: 20 53% 11%;
+    --card: 36 47% 98%;
+    --card-foreground: 20 53% 11%;
+    --popover: 36 47% 98%;
+    --popover-foreground: 20 53% 11%;
+    --primary: 0 56% 23%;
+    --primary-foreground: 36 47% 96%;
+    --secondary: 36 30% 90%;
+    --secondary-foreground: 20 53% 11%;
+    --muted: 36 24% 90%;
+    --muted-foreground: 24 12% 53%;
+    --accent: 41 50% 54%;
+    --accent-foreground: 20 53% 11%;
+    --destructive: 0 72% 41%;
+    --destructive-foreground: 36 47% 96%;
+    --border: 36 22% 82%;
+    --input: 36 22% 82%;
+    --ring: 0 56% 23%;
+    --chart-1: 0 56% 23%;
+    --chart-2: 41 50% 54%;
+    --chart-3: 24 40% 50%;
+    --chart-4: 150 30% 45%;
+    --chart-5: 200 40% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .bg-grain {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(92, 26, 26, 0.04) 1px,
+      transparent 0
+    );
+    background-size: 24px 24px;
+  }
+  .bg-grain-gold {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(201, 168, 76, 0.08) 1px,
+      transparent 0
+    );
+    background-size: 20px 20px;
+  }
+}
