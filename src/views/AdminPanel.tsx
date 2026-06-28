@@ -255,8 +255,8 @@ export function AdminPanel() {
         </div>
 
         {/* Admin Tabs */}
-        <Tabs value={adminTab} onValueChange={setAdminTab} className="mb-6">
-          <TabsList className="bg-cream-100/70 border border-maroon/10 p-1">
+        <Tabs value={adminTab} onValueChange={setAdminTab}>
+          <TabsList className="mb-6 bg-cream-100/70 border border-maroon/10 p-1">
             {tabs.map(t => (
               <TabsTrigger key={t.id} value={t.id}
                 className="data-[state=active]:bg-maroon data-[state=active]:text-cream data-[state=active]:shadow-sm gap-1.5 px-3 py-1.5 text-sm">
@@ -265,7 +265,6 @@ export function AdminPanel() {
               </TabsTrigger>
             ))}
           </TabsList>
-        </Tabs>
 
         {/* ─── TAB: Dashboard ─── */}
         <TabsContent value="dashboard" className="mt-0 animate-fade-in">
@@ -749,6 +748,7 @@ export function AdminPanel() {
             </Card>
           )}
         </TabsContent>
+        </Tabs>
       </div>
 
       {/* EDIT MESSAGE MODAL */}
